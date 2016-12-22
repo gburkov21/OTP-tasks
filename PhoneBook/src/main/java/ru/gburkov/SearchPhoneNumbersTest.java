@@ -8,7 +8,13 @@ public class SearchPhoneNumbersTest {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         SearchPhoneNumbers searchPhoneNumbers = new SearchPhoneNumbers();
-        System.out.println("Please enter a name: ");
-        searchPhoneNumbers.phoneSearch(reader.readLine());
+        while (true) {
+            System.out.println("Please enter a name or enter 'exit' for close: ");
+            String input = reader.readLine();
+            searchPhoneNumbers.phoneSearch(input);
+            if (input.equalsIgnoreCase("exit")){
+                break;
+            }
+        }
     }
 }
