@@ -19,19 +19,15 @@ class SearchPhoneNumbers {
     }
 
     void phoneSearch(String value) {
-        if (!value.equalsIgnoreCase("exit")) {
-            if (map.containsKey(value)) {
-                int count = 1;
-                for (int i = 0; i < map.get(value).size(); i++) {
-                    System.out.println(count++ + ". " + map.get(value).get(i));
-                }
-            } else {
-                System.out.println("Name not found.");
+        if (map.containsKey(value)) {
+            int count = 1;
+            for (int i = 0; i < map.get(value).size(); i++) {
+                System.out.println(count++ + ". " + map.get(value).get(i));
             }
+        } else {
+            System.out.println("Name not found.");
         }
     }
-
-
 
 
 }

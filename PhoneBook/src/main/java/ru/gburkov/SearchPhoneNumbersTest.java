@@ -11,10 +11,10 @@ public class SearchPhoneNumbersTest {
         while (true) {
             System.out.println("Please enter a name or enter 'exit' for close: ");
             String input = reader.readLine();
-            searchPhoneNumbers.phoneSearch(input);
             if (input.equalsIgnoreCase("exit")){
                 break;
             }
+            searchPhoneNumbers.phoneSearch(input);
         }
     }
 }
